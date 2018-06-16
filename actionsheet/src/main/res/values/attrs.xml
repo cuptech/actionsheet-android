@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ActionSheets">
+        <attr name="actionSheetStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="ActionSheet">
+        <attr name="actionBackground" format="color|reference" />
+        <attr name="actionTitleBackground" format="color|reference" />
+        <attr name="actionTitleSingleBackground" format="color|reference" />
+        <attr name="actionSubTitleBackground" format="color|reference" />
+        <attr name="cancelActionBackground" format="color|reference" />
+        <attr name="actionButtonTopBackground" format="color|reference" />
+        <attr name="actionButtonMiddleBackground" format="color|reference" />
+        <attr name="actionButtonBottomBackground" format="color|reference" />
+        <attr name="actionButtonSingleBackground" format="color|reference" />
+        <attr name="actionTitleTextColor" format="color|reference" />
+        <attr name="actionSubTitleTextColor" format="color|reference" />
+        <attr name="cancelActionTextColor" format="color|reference" />
+        <attr name="actionButtonTextColor" format="color|reference" />
+        <attr name="actionPadding" format="dimension|reference" />
+        <attr name="actionButtonSpacing" format="dimension|reference" />
+        <attr name="cancelActionMarginTop" format="dimension|reference" />
+        <attr name="actionTextSize" format="dimension|reference" />
+    </declare-styleable>
+
+</resources>

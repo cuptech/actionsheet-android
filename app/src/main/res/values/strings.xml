@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ActionSheet Android</string>
+    <string name="show_full_action_sheet">Show full ActionSheet</string>
+    <string name="show_without_sub_title">Show without subtitle</string>
+    <string name="show_without_title">Show without title</string>
+    <string name="show_empty">Show empty</string>
+</resources>

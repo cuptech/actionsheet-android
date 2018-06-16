@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#157efb</color>
+    <color name="colorPrimaryDark">#0e6ddf</color>
+    <color name="colorAccent">#157efb</color>
+
+    <color name="grayDark">#666666</color>
+    <color name="grayLite">#E4E4E4</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="dimmer">#20ffffff</color>
+    <color name="blue">#3E96D7</color>
+    <color name="red">#D94955</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="dark_white">#eef7ff</color>
+    <color name="menu_bar">#f2f2f2</color>
+    <color name="menu_bar_selected">#e4e4e4</color>
+    <color name="grey">#FF433E3E</color>
+
+
+</resources>

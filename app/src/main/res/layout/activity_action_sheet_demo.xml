@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ActionSheetDemo">
+
+    <Button
+    android:id="@+id/btnShowFull"
+    android:layout_width="200dp"
+    android:layout_height="40dp"
+    android:layout_margin="20dp"
+    android:text="@string/show_full_action_sheet"
+    android:onClick="showFullActionSheet"
+    android:textAllCaps="false"
+    android:background="@drawable/bg_button_primary_white"
+    android:textColor="@color/primary"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/btnShowWithoutSubTitle"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:text="@string/show_without_sub_title"
+        android:onClick="showWithoutSubTitle"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_button_primary_white"
+        android:textColor="@color/primary"
+        app:layout_constraintTop_toBottomOf="@+id/btnShowFull"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/btnShowWithoutTitle"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:text="@string/show_without_title"
+        android:onClick="showWithoutTitle"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_button_primary_white"
+        android:textColor="@color/primary"
+        app:layout_constraintTop_toBottomOf="@+id/btnShowWithoutSubTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/btnShowEmpty"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:text="@string/show_empty"
+        android:onClick="showEmpty"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_button_primary_white"
+        android:textColor="@color/primary"
+        app:layout_constraintTop_toBottomOf="@+id/btnShowWithoutTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
