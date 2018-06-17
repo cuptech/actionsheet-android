@@ -9,6 +9,15 @@ ActionSheet for android like iOS
 
 ### Add dependency
 
+### Add this to your root build.gradle file:
+```groovy
+repositories {
+    mavenCentral()
+    jcenter()
+}
+```
+
+### Now add the dependency to your app build.gradle file:
 ```groovy
 dependencies {
     compile 'com.github.cuptech:actionsheet-android:1.0'
