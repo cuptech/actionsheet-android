@@ -11,7 +11,7 @@ ActionSheet for android like iOS
 
 ```groovy
 dependencies {
-    compile 'Todo'
+    compile 'com.github.cuptech:actionsheet-android:1.0'
 }
 ```
 
