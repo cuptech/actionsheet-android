@@ -232,6 +232,15 @@ public class ActionSheet extends Fragment implements View.OnClickListener {
 
     }
 
+    private void createBottomLine(){
+        View view = new View(getActivity());
+        view.setBackground(getActivity().getResources().getDrawable(R.drawable.bottom_line));
+        LinearLayout.LayoutParams params = createButtonLayoutParams();
+        params.height = 1;
+        view.setAlpha(0.5f);
+        mPanel.addView(view, params);
+    }
+
     private void createItems() {
         String title = getTitle();
         String subTitle = getSubTitle();
@@ -246,7 +255,7 @@ public class ActionSheet extends Fragment implements View.OnClickListener {
         txtTitle.setGravity(Gravity.CENTER);
         txtTitle.setTextSize(20);
         txtTitle.setTypeface(txtTitle.getTypeface(), Typeface.BOLD);
-        txtTitle.setPadding(20, 20, 20, 10);
+        txtTitle.setPadding(20, 30, 20, 10);
         txtTitle.setTextColor(mAttrs.actionTitleTextColor);
         txtTitle.setBackground(mAttrs.actionTitleBackground);
 
@@ -271,7 +280,7 @@ public class ActionSheet extends Fragment implements View.OnClickListener {
             txtTitle.setOnClickListener(this);
             mPanel.addView(txtTitle, params);
 
-            txtTitle.setPadding(20, 20, 20, 20);
+            txtTitle.setPadding(20, 30, 20, 30);
             txtTitle.setBackground(mAttrs.actionTitleSingleBackground);
         }else if(!isTitle && isSubTitle){
             LinearLayout.LayoutParams params = createButtonLayoutParams();
@@ -289,6 +298,9 @@ public class ActionSheet extends Fragment implements View.OnClickListener {
         ItemAction[] itemActions = getActionItems();
         if (itemActions != null) {
             for (int i = 0; i < itemActions.length; i++) {
+                if((!isTitleEmpty && i < itemActions.length) || (isTitleEmpty && i > 0 && i < itemActions.length)){
+                    createBottomLine();
+                }
                 Button bt = new Button(getActivity());
                 bt.setId(CANCEL_BUTTON_ID + i + 1);
                 bt.setOnClickListener(this);
@@ -497,7 +509,7 @@ public class ActionSheet extends Fragment implements View.OnClickListener {
             this.cancelButtonTextColor = Color.WHITE;
             this.actionButtonTextColor = Color.BLACK;
             this.padding = dp2px(20);
-            this.actionButtonSpacing = dp2px(2);
+            this.actionButtonSpacing = dp2px(0);
             this.cancelButtonMarginTop = dp2px(10);
             this.actionTextSize = dp2px(16);
         }
