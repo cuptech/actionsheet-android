@@ -27,15 +27,15 @@ dependencies {
 ### Create ActionSheet and show
 
 ```kotlin
-val itemActions = arrayOf(
-    ItemAction(1, "Save"), 
-    ItemAction(2, "Delete", true))
+val actionItems = arrayOf(
+    ActionItem(1, "Save"),
+    ActionItem(2, "Delete", true))
 
 ActionSheet.createBuilder(this, supportFragmentManager)
     .setTitle(title)
     .setSubTitle(subTitle)
     .setCancelActionTitle("Cancel")
-    .setActionItems(itemActions)
+    .setActionItems(actionItems)
     .setCancelableOnTouchOutside(true)
     .setListener(this).show()
 ```

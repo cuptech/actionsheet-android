@@ -3,37 +3,37 @@ package com.github.cuptech.actionsheet;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class ItemAction implements Parcelable {
+public class ActionItem implements Parcelable {
     private int id;
     private String name;
     private boolean isWarning = false;
 
-    public ItemAction(int id, String name){
+    public ActionItem(int id, String name){
         this.id = id;
         this.name = name;
     }
 
-    public ItemAction(int id, String name, boolean isWarning){
+    public ActionItem(int id, String name, boolean isWarning){
         this.id = id;
         this.name = name;
         this.isWarning = isWarning;
     }
 
-    private ItemAction(Parcel in) {
+    private ActionItem(Parcel in) {
         id = in.readInt();
         name = in.readString();
         isWarning = in.readByte() != 0;
     }
 
-    public static final Creator<ItemAction> CREATOR = new Creator<ItemAction>() {
+    public static final Creator<ActionItem> CREATOR = new Creator<ActionItem>() {
         @Override
-        public ItemAction createFromParcel(Parcel in) {
-            return new ItemAction(in);
+        public ActionItem createFromParcel(Parcel in) {
+            return new ActionItem(in);
         }
 
         @Override
-        public ItemAction[] newArray(int size) {
-            return new ItemAction[size];
+        public ActionItem[] newArray(int size) {
+            return new ActionItem[size];
         }
     };
 

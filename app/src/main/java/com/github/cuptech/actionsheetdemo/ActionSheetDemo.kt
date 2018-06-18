@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import com.github.cuptech.actionsheet.ActionSheet
-import com.github.cuptech.actionsheet.ItemAction
+import com.github.cuptech.actionsheet.ActionItem
 
 class ActionSheetDemo : AppCompatActivity(), ActionSheet.ActionSheetListener{
 
@@ -24,15 +24,15 @@ class ActionSheetDemo : AppCompatActivity(), ActionSheet.ActionSheetListener{
 
     private fun showActionSheet(title:String, subTitle:String){
 
-        val itemActions = arrayOf(
-                ItemAction(1, "Save"),
-                ItemAction(2, "Delete", true))
+        val actionItems = arrayOf(
+                ActionItem(1, "Save"),
+                ActionItem(2, "Delete", true))
 
         ActionSheet.createBuilder(this, supportFragmentManager)
                 .setTitle(title)
                 .setSubTitle(subTitle)
                 .setCancelActionTitle("Cancel")
-                .setActionItems(itemActions)
+                .setActionItems(actionItems)
                 .setCancelableOnTouchOutside(true)
                 .setListener(this).show()
     }
